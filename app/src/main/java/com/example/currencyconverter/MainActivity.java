@@ -43,11 +43,12 @@ public class MainActivity extends AppCompatActivity{
         // Gets currency-array from strings.xml
         Resources res = getResources();
         final String[] currencies = res.getStringArray(R.array.currency_array);
+        final String[] spinner_dropdown = res.getStringArray(R.array.spinner_dropdown);
 
         // Sets spinners
         spinner1 = (Spinner) findViewById(R.id.fromSpinner);
         spinner2 = (Spinner) findViewById(R.id.toSpinner);
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, spinner_dropdown);
 
         // Sets convert amount
 
@@ -78,9 +79,10 @@ public class MainActivity extends AppCompatActivity{
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                return;
             }
         });
+        /*
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(UrlManager.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -94,13 +96,13 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onResponse(Call<List<Currency>> call, Response<List<Currency>> response) {
                 List<Currency> currencies = response.body();
-
             }
 
             @Override
             public void onFailure(Call<List<Currency>> call, Throwable t) {
-
+                return;
             }
         });
+        */
     }
 }
