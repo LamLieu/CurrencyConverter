@@ -1,5 +1,56 @@
 <resources>
     <string name="app_name">Currency Converter</string>
-    <string name="hello_world_text">Hello Universe</string>
+    <string name="header_text">Currency Converter</string>
     <string name="button">Convert</string>
+    <string name="currency1_prompt">From...</string>
+    <string name="currency2_prompt">To...</string>
+
+    <string-array name="currency_array">
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>CNY</item>
+        <item>CHF</item>
+        <item>EUR</item>
+        <item>GBP</item>
+        <item>HKD</item>
+        <item>HUF</item>
+        <item>IDR</item>
+        <item>INR</item>
+        <item>JPY</item>
+        <item>MXN</item>
+        <item>MYR</item>
+        <item>NZD</item>
+        <item>PHP</item>
+        <item>RUB</item>
+        <item>SEK</item>
+        <item>SGD</item>
+        <item>THB</item>
+        <item>USD</item>
+        <item>ZAR</item>
+    </string-array>
+
+    <string-array name="spinner_dropdown">
+        <item>Australian Dollar (AUD)</item>
+        <item>Canadian Dollar (CAD)</item>
+        <item>Chinese Yuan (CNY)</item>
+        <item>Swiss Franc (CHF)</item>
+        <item>European Euro (EUR)</item>
+        <item>Great British Pound (GBP)</item>
+        <item>Hong Kong Dollar (HKD)</item>
+        <item>Hungarian Forint (HUF)</item>
+        <item>Indonesian Rupiah (IDR)</item>
+        <item>Indian Rupee (INR)</item>
+        <item>Japanese Yen (JPY)</item>
+        <item>Mexican Peso (MXN)</item>
+        <item>Malaysian Ringgit (MYR)</item>
+        <item>New Zealand Dollar (NZD)</item>
+        <item>Philippine Piso (PHP)</item>
+        <item>Russian Ruble (RUB)</item>
+        <item>Swedish Krona (SEK)</item>
+        <item>Singapore Dollar (SGD)</item>
+        <item>Thai Baht (THB)</item>
+        <item>United States Dollar (USD)</item>
+        <item>South African Rand (ZAR)</item>
+    </string-array>
+
 </resources>
