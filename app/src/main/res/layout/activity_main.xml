@@ -46,7 +46,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/convertAmount"
+        app:layout_constraintBottom_toTopOf="@+id/toConvertAmt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,21 +64,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/convertAmount" />
+        app:layout_constraintTop_toBottomOf="@+id/toConvertAmt" />
 
     <EditText
-        android:id="@+id/convertAmount"
+        android:id="@+id/toConvertAmt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fromSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/fromSpinner"
+        android:importantForAutofill="no"
+        android:labelFor="@+id/toConvertAmt"/>
 
     <TextView
         android:id="@+id/outputDisplay"

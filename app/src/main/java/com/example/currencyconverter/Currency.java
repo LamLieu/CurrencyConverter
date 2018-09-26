@@ -6,7 +6,6 @@ import com.google.gson.annotations.SerializedName;
  * Created by Lam Lieu on 9/23/2018.
  */
 public class Currency {
-
     @SerializedName("error")
     private int error;
     @SerializedName("error_message")
