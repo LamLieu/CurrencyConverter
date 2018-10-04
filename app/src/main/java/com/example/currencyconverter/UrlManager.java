@@ -5,5 +5,5 @@ package com.example.currencyconverter;
  */
 public class UrlManager {
     protected static final String BASE_URL = "https://www.amdoren.com/api/";
-    protected static final String latest = "/currency.php?api_key=5Y79WmSsgV5zsnLjQJXgwJHDvBETgh&from={fromCurrency}&to={toCurrency}&amount={amount}";
+    protected static final String latest = "/currency.php";
 }

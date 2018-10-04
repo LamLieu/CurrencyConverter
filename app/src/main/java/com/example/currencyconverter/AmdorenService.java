@@ -11,8 +11,8 @@ import retrofit2.http.Query;
  */
 public interface AmdorenService {
     @GET(UrlManager.latest)
-    Call<List<Currency>> getConvertedAmount(
-            @Query("fromCurrency") String fromCurrency, @Query("ToCurrency") String toCurrency, @Query("amount") String amount
+    Call<Currency> getConvertedAmount(
+            @Query("api_key") String api_key, @Query("fromCurrency") String fromCurrency, @Query("ToCurrency") String toCurrency, @Query("amount") String amount
     );
 }
 

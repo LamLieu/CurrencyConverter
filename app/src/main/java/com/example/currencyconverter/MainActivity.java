@@ -5,9 +5,9 @@ package com.example.currencyconverter;
  */
 
 import android.content.res.Resources;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,12 +15,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,7 +33,7 @@ public class MainActivity extends AppCompatActivity{
 
     private String fromCurrency = "";
     private String toCurrency = "";
-    private String convertedCurrencyAmt;
+    private String convertedCurrencyAmt = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,22 +93,23 @@ public class MainActivity extends AppCompatActivity{
         convertButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call<List<Currency>> call = service.getConvertedAmount(fromCurrency, toCurrency, firstCurrencyAmt.toString());
-                /*
-                call.enqueue(new Callback<List<Currency>>() {
+                double firstCurrencyAmtDouble = Double.parseDouble(firstCurrencyAmt.getText().toString());
+                Call<Currency> call = service.getConvertedAmount("5Y79WmSsgV5zsnLjQJXgwJHDvBETgh", fromCurrency, toCurrency, firstCurrencyAmt.getText().toString());
+
+                call.enqueue(new Callback<Currency>() {
                     @Override
-                    public void onResponse(Call<List<Currency>> call, Response<List<Currency>> response) {
-                        if (response.isSuccessful()) {
-                            List<Currency> currencies = response.body();
-                        }
+                    public void onResponse(Call<Currency> call, Response<Currency> response) {
+                        Currency currency = response.body();
+                        Log.d("AnotherSingleView","Please check RESPONSE: "+response.body().toString());
+                        String test = Double.toString(response.body().getAmount());
+                        displayResult.setText(currency.getAmount());
                     }
 
                     @Override
-                    public void onFailure(Call<List<Currency>> call, Throwable t) {
-                        Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                    public void onFailure(Call<Currency> call, Throwable t) {
+                        Log.d("uhh", "onFailure: ");
                     }
                 });
-                */
             }
         });
     }
