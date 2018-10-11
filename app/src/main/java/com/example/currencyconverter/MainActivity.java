@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 double firstCurrencyAmtDouble = Double.parseDouble(firstCurrencyAmt.getText().toString());
-                Call<Currency> call = service.getConvertedAmount("5Y79WmSsgV5zsnLjQJXgwJHDvBETgh", fromCurrency, toCurrency, firstCurrencyAmt.getText().toString());
+                Call<Currency> call = service.getConvertedAmount("87WxqUCzBpSbXPTWwgYvVKaEtwj3DY", fromCurrency, toCurrency, firstCurrencyAmt.getText().toString());
 
                 call.enqueue(new Callback<Currency>() {
                     @Override
